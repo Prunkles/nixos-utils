@@ -25,9 +25,6 @@
 
             echo "$target_host: nixos-rebuild $operation --flake \"$flake_path#$flake_output\""
             ${pkgs.openssh}/bin/ssh -t $SSH_OPTS "$target_host" nixos-rebuild $operation --flake "$flake_path#$flake_output"
-
-            echo "Swapping $flake_path to /etc/nixos"
-            ${pkgs.openssh}/bin/ssh $SSH_OPTS "$target_host" "rm -r /etc/nixos && cp -r \"$flake_path\" /etc/nixos"
           '';
         };
       };
