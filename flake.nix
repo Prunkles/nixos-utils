@@ -2,7 +2,7 @@
   description = "pawuq nixos utils";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
   };
 
   outputs = inputs@{ self, nixpkgs, flake-parts }:
